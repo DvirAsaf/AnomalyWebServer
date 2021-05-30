@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 class TimeSeries{
-
+//read csv file and split according ',' and enter the text to matrix
     constructor(CSVFile){
         const csv = fs.readFileSync(CSVFile, { encoding: 'utf8', flag: 'r' });
         this.numOfFeatures = 0;
@@ -25,14 +25,17 @@ class TimeSeries{
         }
     }
 
+    //get vector matrix
     get_vector_Matrix(i) {
         return this.matrix[i];
     }
 
+    //get feature
     getFeature() {
         return this.feature;
     }
 
+    //location of feature
     featureLocation(feature) {
         for (let i = 0; i < this.numOfFeatures; i++) {
             if (this.data[0][i] === feature) {
@@ -42,15 +45,16 @@ class TimeSeries{
         console.log('no match feature');
     }
 
+    //get feature row values
     getRowValuesOfFeature(feature) {
         let location = this.featureLocation(feature);
         return this.get_vector_Matrix(location);
     }
 
+    //get information number of lines
     getNumOfInfoLines(){
         return this.numOfLines - 1;
     }
-
 }
 
 module.exports= TimeSeries;

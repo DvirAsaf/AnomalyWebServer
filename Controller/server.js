@@ -15,7 +15,7 @@ const resultsTableHtml =
 // Start website on 8080 localhost
 startWebApp();
 
-// Functions
+
 function importModules()
 {
     const myFetch = require('node-fetch')
@@ -97,7 +97,7 @@ function postInfo(res, result)
     }
     res.end()
 }
-//function that collect all data the come from user
+//collect all data from user
 function getRequestVals(req)
 {
     let trainFile = req.files.trainSetInput
@@ -105,7 +105,7 @@ function getRequestVals(req)
     let algorithmType = req.body.chosenAlgorithm
     return {trainFile, testSetInput, algorithmType};
 }
-//when the user choose post with '/' this function run
+//
 function appPostAnomalies()
 {
     server.post('/', (req, res) => {
@@ -117,14 +117,14 @@ function appPostAnomalies()
         })
     })
 }
-
+//connect by get request
 function AppGet()
 {
     server.get('/', (req, res) => {
         res.sendFile('View/index.html')
     })
 }
-//this functions are for connecting with the server
+//connecting with the server
 function startWebApp()
 {
     StartAppUsing();

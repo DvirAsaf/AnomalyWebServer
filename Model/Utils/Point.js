@@ -1,3 +1,4 @@
+//point class
 class Point
 {
     constructor(x, y) {

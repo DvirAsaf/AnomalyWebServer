@@ -1,3 +1,4 @@
+//circle class
 class Circle{
     constructor(centerPoint, radius)
     {
