@@ -59,6 +59,12 @@ On the right side of table is the ```LINE``` that represents the anomaly line. <
 3.Now you see my web page. Choose algorithm and upload your ```CSV``` files. <br>
 4.Click ```UPLOAD```.
 
+<br>
+
+![linkAndStart](https://user-images.githubusercontent.com/59093573/120106107-747a6200-c164-11eb-9970-19f4f6cd95f8.jpg)
+
+<br>
+
 # MVC Design Pattern
 
 Controller : connect between the model and the view. <br>
