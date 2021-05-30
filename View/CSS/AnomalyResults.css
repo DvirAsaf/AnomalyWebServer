@@ -1,4 +1,6 @@
-#error_result {
+/* style for error messages*/
+#error_result
+{
     font-family: "Brush Script MT";
     border-collapse: collapse;
     width: 100%;
@@ -6,26 +8,34 @@
     color: white;
 }
 
-.title{
+/* style for the title*/
+.title
+{
     text-align: center;
     font-family: "Comic Sans MS";
     color: #4e16b6;
     font-weight: bold;
 }
 
-.row {
+/* style for rowID*/
+.row
+{
     text-align: center;
     font-family: "Comic Sans MS";
     font-size: 25px;
 }
-/*style for */
-.info {
+
+/*style for information*/
+.info
+{
     text-align: center;
     font-family: "Comic Sans MS";
     font-size: 25px;
 }
-/*style for error message*/
-#error_result th {
+
+/*style for error message table*/
+#error_result th
+{
     padding-top: 15px;
     padding-bottom: 15px;
     border: #4e16b6;

@@ -28,6 +28,7 @@ function importModules()
     const readLines = require('n-readlines');
     return {myExpress: myExpress, convertJsonToHtml: convertJsonToHtml, myFileUpload: myFileUpload, myModel: myModel, readLines: readLines, resultData: resultData, myFetch: myFetch, myPath: myPath};
 }
+//
 function AppPostTableResults()
 {
     //
@@ -48,6 +49,7 @@ function AppPostTableResults()
         }
     })
 }
+//
 function StartAppUsing()
 {
     server.use(myExpress.urlencoded(
@@ -57,6 +59,7 @@ function StartAppUsing()
     server.use(myFileUpload({}))
     server.use(myExpress.static('view'))
 }
+//
 function getInput(req)
 {
     const AnomaliesDetectorInput = new resultData()
@@ -65,6 +68,7 @@ function getInput(req)
     AnomaliesDetectorInput.append("chosenAlgorithm", req.body.chosenAlgorithm)
     return AnomaliesDetectorInput;
 }
+//
 function WriteRows(lineReaderStreamer, res)
 {
     let row;
@@ -77,6 +81,7 @@ function WriteRows(lineReaderStreamer, res)
     }
     return row;
 }
+//
 function postInfo(res, result)
 {
     let lineReaderStreamer;
@@ -92,6 +97,7 @@ function postInfo(res, result)
     }
     res.end()
 }
+//function that collect all data the come from user
 function getRequestVals(req)
 {
     let trainFile = req.files.trainSetInput
@@ -99,6 +105,7 @@ function getRequestVals(req)
     let algorithmType = req.body.chosenAlgorithm
     return {trainFile, testSetInput, algorithmType};
 }
+//when the user choose post with '/' this function run
 function appPostAnomalies()
 {
     server.post('/', (req, res) => {
@@ -110,12 +117,14 @@ function appPostAnomalies()
         })
     })
 }
+
 function AppGet()
 {
     server.get('/', (req, res) => {
         res.sendFile('View/index.html')
     })
 }
+//this functions are for connecting with the server
 function startWebApp()
 {
     StartAppUsing();

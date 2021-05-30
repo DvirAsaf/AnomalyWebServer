@@ -1,14 +1,20 @@
-.homepageBackground {
+/* style for home page - image background*/
+.homepageBackground
+{
     background-image: url("../Resource/254381.jpg");
     background-size: cover;
 }
 
-.head_title {
+/*style for the head title*/
+.head_title
+{
     font-family: Harrington;
     color: #4e16b6;
 }
 
-.Invalidwarning{
+/* style for error format from the user*/
+.Invalidwarning
+{
     margin-top: 50px;
     position: fixed;
     color: #4e16b6;
@@ -16,7 +22,9 @@
     font-size: 20px;
 }
 
-.radio-buttons-center {
+/* style for algorithm option*/
+.radio-buttons-center
+{
     font-weight: bold;
     font-size: 25px;
     text-align: center;
@@ -24,7 +32,9 @@
     color: #4e16b6;
 }
 
-.uploadFilesButton {
+/* style for upload button*/
+.uploadFilesButton
+{
     font-family: "Comic Sans MS";
     border-radius: 3px;
     border: none;
@@ -42,7 +52,9 @@
     margin-left: 100px;
 }
 
-.frame {
+/* style for page frame*/
+.frame
+{
     border: none;
     margin-top: 15px;
 }
