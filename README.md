@@ -49,7 +49,7 @@ On the right side of table is the ```LINE``` that represents the anomaly line. <
 3.Check that npm and node.js are installed: run this in your terminal  ```npm -v``` and ```node -v```  <br>
 4.Download webStorm 2021.1.1 https://www.jetbrains.com/webstorm/ <br>
 5.Prepare two ```CSV``` files. <br>
-6.Clone the project. <br>
+6.Clone the project. https://github.com/DvirAsaf/AnomalyWebServer <br>
 7.Run this in your terminal ```npm install```. <br>
 
 # Start
