@@ -48,7 +48,6 @@ class Hybrid extends linear {
             return (sqrt > c.threshold);
         }
     }
-
 }
 
 module.exports = Hybrid;

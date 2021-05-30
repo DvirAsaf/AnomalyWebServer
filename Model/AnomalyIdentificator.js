@@ -21,7 +21,6 @@ function createMatrix(row, col)
 
 function fillCsvKeys(info)
 {
-    //init and fill csv keys
     let keys = info[0].split(",")
     keys[keys.length - 1] = keys[keys.length - 1].replaceAll("\r", "\n").slice(0, -1)
     return keys;
@@ -56,20 +55,13 @@ function deleteBackSlashRow(valuesNumber, vals)
 
 function fillCsvValues(valuesNumber, length, info)
 {
-    //init and fill data values
     let details = createMatrix(valuesNumber, length)
     splitMethod(valuesNumber, details, info);
-
-    //init and fill csv values
     let values = createMatrix(length, valuesNumber)
     fromMatrixTOString(length, valuesNumber, values, details);
-    //remove "\r" from last row of values
     deleteBackSlashRow(valuesNumber, values);
-
     return values;
 }
-
-
 
 const createCsvFile = (info, name) =>
 {
@@ -113,12 +105,8 @@ function splitCorrelated(anomalies, arr, corrFeatures)
     let m;
     for (m = 0; m < anomalies.length; m++) {
         let cureFeature = anomalies[m].information;
-
-        // split the two correlative by '+'
         let feat = cureFeature.split("+");
         arr[m] = new Array(3)
-
-        // fill the arrays with the correct values of the anomalies and the line it happened
         let k;
         for (k = 0; k < corrFeatures.length; k++)
         {

@@ -10,19 +10,14 @@ class TimeSeries{
         this.feature = lines[0].split(',');
         this.numOfFeatures = this.feature.length;
         this.data = [];
-        //split each word by comma into strings
         for (let i = 0; i < this.numOfLines; i++) {
             var cells = lines[i].split(",");
             this.data.push(cells);
-
         }
-        //transpose matrix
         this.matrix = new Array(this.numOfFeatures);
-
         for (let i = 0; i < this.numOfFeatures; ++i) {
             this.matrix[i] = new Array(this.numOfLines - 1);
         }
-
         for (let i = 0; i < this.numOfFeatures; i++) {
             for (let j = 1; j < this.numOfLines; j++) {
                 this.matrix[i][j - 1] = this.data[j][i];
@@ -59,9 +54,3 @@ class TimeSeries{
 }
 
 module.exports= TimeSeries;
-
-
-
-
-
-

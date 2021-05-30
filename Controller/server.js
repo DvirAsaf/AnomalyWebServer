@@ -102,7 +102,6 @@ function getRequestVals(req)
 function appPostAnomalies()
 {
     server.post('/', (req, res) => {
-        //get values from View
         let {trainFile, testSetInput, algorithmType} = getRequestVals(req);
         myModel.anomalyIdentificator(trainFile.data.toString(), testSetInput.data.toString(), algorithmType).then((result) => {
             res.contentType("application/json")
