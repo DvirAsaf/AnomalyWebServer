@@ -1,0 +1,38 @@
+#error_result {
+    font-family: "Brush Script MT";
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #4e16b6;
+    color: white;
+}
+
+.title{
+    text-align: center;
+    font-family: "Comic Sans MS";
+    color: #4e16b6;
+    font-weight: bold;
+}
+
+.row {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 25px;
+}
+/*style for */
+.info {
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 25px;
+}
+/*style for error message*/
+#error_result th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: #4e16b6;
+    color: white;
+}
+
+
+
+
+
