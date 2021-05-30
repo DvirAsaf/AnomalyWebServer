@@ -77,6 +77,8 @@ Model : get ```CSV``` files for the user, study the data and detect anomalies, w
 
 <br>
 
+![uml](https://user-images.githubusercontent.com/59093573/120112814-283d1b00-c180-11eb-9603-96aaa5667dae.jpg)
+
 <br>
 
 # Video Explanation
