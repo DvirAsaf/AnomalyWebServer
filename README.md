@@ -75,6 +75,8 @@ Model : get ```CSV``` files for the user, study the data and detect anomalies, w
 
 # Video Explanation
 
+https://youtu.be/0KP_rPYes-Q
+
 # Authors
 Dvir Asaf <br>
 Or Memiya
