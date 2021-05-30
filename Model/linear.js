@@ -3,17 +3,21 @@ const AnomalyReport = require("./getResults");
 const mathHelper = require('./Utils/mathHelper')
 const Point = require('./Utils/Point')
 
-function pushAnomaly(x, y, correlatedFeatures, anomaly) {
+function pushAnomaly(x, y, correlatedFeatures, anomaly)
+{
     let j;
-    for (j = 0; j < x.length; j++) {
-        if (this.isAnomalous(x[j], y[j], correlatedFeatures)) {
+    for (j = 0; j < x.length; j++)
+    {
+        if (this.isAnomalous(x[j], y[j], correlatedFeatures))
+        {
             let det = correlatedFeatures.F1 + "-" + correlatedFeatures.F2;
             anomaly.push(new AnomalyReport(det, (j + 1)));
         }
     }
 }
 
-function enterValuesToMatrix(attribute, timeSeries, rowsNumber, vals) {
+function enterValuesToMatrix(attribute, timeSeries, rowsNumber, vals)
+{
     let k;
     for (k = 0; k < attribute.length; k++) {
         let x = timeSeries.getRowValuesOfFeature(attribute[k])
@@ -23,7 +27,8 @@ function enterValuesToMatrix(attribute, timeSeries, rowsNumber, vals) {
     }
 }
 
-class Linear {
+class Linear
+{
     #correlationFeatures
     #threshold
     #mathHelper
@@ -58,7 +63,7 @@ class Linear {
             this.learnHelper(timeSeries, tempMax, feature1, feature2, ps);
         }
     }
-
+//check which columns have the best correlation update feature1,feature2 and corrlation,
     learnNormal(timeSeries)
     {
         let attribute = timeSeries.getFeature()

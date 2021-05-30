@@ -1,7 +1,8 @@
 //point class
 class Point
 {
-    constructor(x, y) {
+    constructor(x, y)
+    {
         this.y = y
         this.x = x
     }

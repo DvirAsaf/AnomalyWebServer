@@ -1,4 +1,5 @@
-function exportModules() {
+function exportModules()
+{
     const linear = require('./linear')
     const Circle = require('./Utils/Circle')
     const Point = require('./Utils/Point')
@@ -9,9 +10,9 @@ function exportModules() {
 
 const {linear, Circle, Point, minCircle, CorrelatingFeatures} = exportModules();
 
-class Hybrid extends linear {
+class Hybrid extends linear
+{
     #correlationFeatures
-
     constructor() {
         super();
         this.#correlationFeatures = super.getCorrelationFeatures();
@@ -35,7 +36,8 @@ class Hybrid extends linear {
         }
     }
 //flout x , flout y .correlated features c
-    isAnomalous(x, y, c) {
+    isAnomalous(x, y, c)
+    {
         if (Math.abs(c.maxCorrelation) > 0.9)
         {
             return super.isAnomalous(x, y, c);

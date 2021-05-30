@@ -28,10 +28,9 @@ function importModules()
     const readLines = require('n-readlines');
     return {myExpress: myExpress, convertJsonToHtml: convertJsonToHtml, myFileUpload: myFileUpload, myModel: myModel, readLines: readLines, resultData: resultData, myFetch: myFetch, myPath: myPath};
 }
-//
+
 function AppPostTableResults()
 {
-    //
     server.post('/detect', (req, res) =>
     {
         if (req.files)
@@ -49,7 +48,7 @@ function AppPostTableResults()
         }
     })
 }
-//
+
 function StartAppUsing()
 {
     server.use(myExpress.urlencoded(
@@ -59,7 +58,7 @@ function StartAppUsing()
     server.use(myFileUpload({}))
     server.use(myExpress.static('view'))
 }
-//
+
 function getInput(req)
 {
     const AnomaliesDetectorInput = new resultData()
@@ -68,7 +67,7 @@ function getInput(req)
     AnomaliesDetectorInput.append("chosenAlgorithm", req.body.chosenAlgorithm)
     return AnomaliesDetectorInput;
 }
-//
+
 function WriteRows(lineReaderStreamer, res)
 {
     let row;
@@ -81,7 +80,7 @@ function WriteRows(lineReaderStreamer, res)
     }
     return row;
 }
-//
+
 function postInfo(res, result)
 {
     let lineReaderStreamer;
@@ -103,14 +102,17 @@ function getRequestVals(req)
     let trainFile = req.files.trainSetInput
     let testSetInput = req.files.testSetInput
     let algorithmType = req.body.chosenAlgorithm
-    return {trainFile, testSetInput, algorithmType};
+    return {trainFile, testSetInput, algorithmType
+    };
 }
-//
+
 function appPostAnomalies()
 {
-    server.post('/', (req, res) => {
+    server.post('/', (req, res) =>
+    {
         let {trainFile, testSetInput, algorithmType} = getRequestVals(req);
-        myModel.anomalyIdentificator(trainFile.data.toString(), testSetInput.data.toString(), algorithmType).then((result) => {
+        myModel.anomalyIdentificator(trainFile.data.toString(), testSetInput.data.toString(), algorithmType).then((result) =>
+        {
             res.contentType("application/json")
             res.send(JSON.stringify(result.anomalies))
             res.end()
@@ -120,7 +122,8 @@ function appPostAnomalies()
 //connect by get request
 function AppGet()
 {
-    server.get('/', (req, res) => {
+    server.get('/', (req, res) =>
+    {
         res.sendFile('View/index.html')
     })
 }
