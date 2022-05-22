@@ -18,7 +18,7 @@
     "express-fileupload": "^1.2.1",
     "line-reader": "^0.4.0",
     "n-readlines": "^1.0.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "node-json2html": "^2.1.0",
     "node-line-reader": "^0.0.3",
     "nodemon": "^2.0.7",
